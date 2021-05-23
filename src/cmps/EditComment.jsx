@@ -7,8 +7,8 @@ export default function EditComment() {
 
     return (
         <div>
-            <form action="">
-                <input classname="comment-input" name="comment" placeholder="הוספי תגובה" />
+            <form className="comment-input" action="">
+                <input className="comment-input" name="comment" placeholder="הוספי תגובה" />
                 <button>פרסמי</button>
             </form>
         </div>

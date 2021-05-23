@@ -120,7 +120,7 @@ export function Chat({ openChat }) {
                         name="txt"
                         className="msg-input"
                         autoComplete="off" />
-                    <SendIcon class="sent"></SendIcon>
+                    <SendIcon className="sent"></SendIcon>
                 </form>
             </div >
         </div >

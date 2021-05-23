@@ -14,8 +14,8 @@ export function loadPosts(filterBy) {
 export function loadUserPosts(filterBy) {
     return async dispatch => {
         try {
-            const eventies = await postService.queryByUser(filterBy)
-            dispatch({ type: 'SET_POSTS', eventies })
+            const postes = await postService.queryByUser(filterBy)
+            dispatch({ type: 'SET_POSTS', postes })
         } catch (err) {
             console.log('Post Actions: err in load', err)
         }
@@ -25,11 +25,11 @@ export function loadUserPosts(filterBy) {
 
 
 
-export function removePost(eventiId) {
+export function removePost(postId) {
     return async dispatch => {
         try {
-            await postService.remove(eventiId)
-            dispatch({ type: 'REMOVE_POST', eventiId })
+            await postService.remove(postId)
+            dispatch({ type: 'REMOVE_POST', postId })
         }
         catch (err) {
             alert('OOPs, try again');
@@ -38,12 +38,12 @@ export function removePost(eventiId) {
     }
 }
 
-export function editPost(eventi) {
+export function editPost(post) {
     return async dispatch => {
         try {
-            const editedPost = await postService.update(eventi)
+            const editedPost = await postService.update(post)
             console.log("editing  action ", editedPost);
-            dispatch({ type: 'EDIT_POST', eventi: editedPost })
+            dispatch({ type: 'EDIT_POST', post: editedPost })
         } catch (err) {
             alert('OOPs, try again to edit');
             console.log('ERR:', err);
@@ -51,11 +51,11 @@ export function editPost(eventi) {
 
     }
 }
-export function addPost(eventi) {
+export function addPost(post) {
     return async dispatch => {
         try {
-            const addPost = await postService.add(eventi)
-            dispatch({ type: 'ADD_POST', eventi: addPost })
+            const addPost = await postService.add(post)
+            dispatch({ type: 'ADD_POST', post: addPost })
         } catch (err) {
             alert('OOPs, try again');
             console.log('ERR:', err);

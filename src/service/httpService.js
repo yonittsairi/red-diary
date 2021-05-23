@@ -1,7 +1,7 @@
 import Axios from 'axios'
 
 const BASE_URL = process.env.NODE_ENV !== 'development' ? '/api/' : '//localhost:3030/api/'
-console.log(process.env.NODE_ENV, 'node env');
+// console.log(process.env.NODE_ENV, 'node env');
 
 var axios = Axios.create({
     withCredentials: false,

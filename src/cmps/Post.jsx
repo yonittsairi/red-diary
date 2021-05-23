@@ -11,7 +11,7 @@ import PanToolIcon from '@material-ui/icons/PanTool';
 import SentimentVeryDissatisfiedIcon from '@material-ui/icons/SentimentVeryDissatisfied';
 import Tooltip from '@material-ui/core/Tooltip';
 import EditComment from './EditComment.jsx';
-export default function Post() {
+export default function Post({ post }) {
     const [state, setstate] = useState({ red: 20, white: 10, openComments: false, comments: 8 })
     const rate = (state.red * 100 / (state.red + state.white)).toFixed(0) + '%'
     const color = state.red > state.white ? "red" : "white"
@@ -25,13 +25,11 @@ export default function Post() {
                 <div className="flex align-center"><Avatar className="avatar" />אנונימית משתפת</div>
                 <div className="pattern">
                     <div contentEditable className="content">
-                        יומן יקר,<br></br>
-                        לורם איפסום דולור סיט אמט, קונסקטורר אדיפיסינג אלית קולהע צופעט למרקוח איבן איף, ברומץ כלרשט מיחוצים. קלאצי סחטיר בלובק. תצטנפל בלינדו למרקל אס לכימפו, דול, צוט ומעיוט - לפתיעם ברשג - ולתיעם גדדיש. קוויז דומור ליאמום בלינך רוגצה. לפמעט
-
+                        {post.data}
+                    </div >
                 </div >
-                </div >
-                {/* <div class="bar">
-                    <div class="rank" style={{ width: rate, backgroundColor: color }}>{rate}</div>
+                {/* <div className="bar">
+                    <div className="rank" style={{ width: rate, backgroundColor: color }}>{rate}</div>
                 </div> */}
                 <div className="flex space-between align-center">
                     {/* <div className="icon-bar flex space-between align-center">

@@ -39,7 +39,7 @@ function query(filterBy = "") {
     // var queryStr = (!filterBy) ? '' : `?title=${filterBy.title}&tags=${filterBy.tags}&minPrice=${filterBy.minPrice}&maxPrice=${filterBy.maxPrice}&sort=anaAref`
     // console.log(queryStr);
     // return httpService.get(`eventi${queryStr}`)
-    console.log(data);
+    return data.posts
     // return storageService.query('eventi')
 
 }
@@ -50,7 +50,7 @@ function query(filterBy = "") {
 // }
 
 
-async function add(eventi) {
-    const addedEventi = await httpService.post(`eventi`, eventi)
-    return addedEventi
+async function add(post) {
+    // const addedEventi = await httpService.post(`eventi`, eventi)
+    return post
 }

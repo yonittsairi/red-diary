@@ -1,4 +1,5 @@
 import React from 'react'
+import { useSelector } from 'react-redux';
 import EditPost from '../cmps/EditPost';
 import PostsList from '../cmps/PostsList';
 import { Chat } from './../cmps/Chat';

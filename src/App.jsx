@@ -10,14 +10,16 @@ import { useEffect, useState } from 'react';
 import { Chat } from './cmps/Chat';
 import { loadPosts } from './store/action/postActions';
 import Diary from './views/Diary';
+import { useDispatch } from 'react-redux';
 
 export function App() {
   const [state, setstate] = useState({ chatOpen: false })
+  const dispatch = useDispatch('')
   const openChat = () => {
     setstate({ ...state, chatOpen: !state.chatOpen })
   }
   useEffect(() => {
-    loadPosts('')
+    dispatch(loadPosts())
     return () => {
 
     }
