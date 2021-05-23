@@ -1,10 +1,10 @@
-import { eventiService } from "../../service/postService.js"
+import { postService } from "../../service/postService.js"
 
 export function loadPosts(filterBy) {
     return async dispatch => {
         try {
-            const eventies = await eventiService.query(filterBy)
-            dispatch({ type: 'SET_POSTS', eventies })
+            const posts = await postService.query(filterBy)
+            dispatch({ type: 'SET_POSTS', posts })
         } catch (err) {
             console.log('Post Actions: err in load', err)
         }
@@ -14,7 +14,7 @@ export function loadPosts(filterBy) {
 export function loadUserPosts(filterBy) {
     return async dispatch => {
         try {
-            const eventies = await eventiService.queryByUser(filterBy)
+            const eventies = await postService.queryByUser(filterBy)
             dispatch({ type: 'SET_POSTS', eventies })
         } catch (err) {
             console.log('Post Actions: err in load', err)
@@ -28,7 +28,7 @@ export function loadUserPosts(filterBy) {
 export function removePost(eventiId) {
     return async dispatch => {
         try {
-            await eventiService.remove(eventiId)
+            await postService.remove(eventiId)
             dispatch({ type: 'REMOVE_POST', eventiId })
         }
         catch (err) {
@@ -41,7 +41,7 @@ export function removePost(eventiId) {
 export function editPost(eventi) {
     return async dispatch => {
         try {
-            const editedPost = await eventiService.update(eventi)
+            const editedPost = await postService.update(eventi)
             console.log("editing  action ", editedPost);
             dispatch({ type: 'EDIT_POST', eventi: editedPost })
         } catch (err) {
@@ -54,7 +54,7 @@ export function editPost(eventi) {
 export function addPost(eventi) {
     return async dispatch => {
         try {
-            const addPost = await eventiService.add(eventi)
+            const addPost = await postService.add(eventi)
             dispatch({ type: 'ADD_POST', eventi: addPost })
         } catch (err) {
             alert('OOPs, try again');

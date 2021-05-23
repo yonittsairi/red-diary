@@ -13,13 +13,14 @@
 
 // Components
 @import "cmps/header";
+@import "cmps/diary";
 @import "cmps/post";
 @import "cmps/comments";
 @import "cmps/chat";
-
-// Pages
-@import "views/about";
 @import "cmps/Login";
 @import "cmps/Signup";
 @import "cmps/footer";
 @import "cmps/Header";
+// Pages
+@import "views/about";
+@import "views/home-page";

@@ -1,6 +1,6 @@
 // import { storageService } from './asyncStorageService'
 import { httpService } from './httpService'
-
+import data from '../data/data.json'
 export const postService = {
     getEventies,
     getById,
@@ -11,12 +11,12 @@ export const postService = {
     // queryByUser
 }
 
-window.eventiService = eventiService
+window.eventiService = postService
 // Note: due to async, must run one by one...
 
 function getEventies() {
     // return storageService.query('eventi')
-    return httpService.get(`eventi`)
+    // return httpService.get(`eventi`)
 }
 
 function getById(eventiId) {
@@ -34,12 +34,14 @@ async function update(eventi) {
     return editedEventi
 }
 
-function query(filterBy) {
-    console.log(filterBy);
-    var queryStr = (!filterBy) ? '' : `?title=${filterBy.title}&tags=${filterBy.tags}&minPrice=${filterBy.minPrice}&maxPrice=${filterBy.maxPrice}&sort=anaAref`
-    console.log(queryStr);
-    return httpService.get(`eventi${queryStr}`)
+function query(filterBy = "") {
+    // console.log(filterBy);
+    // var queryStr = (!filterBy) ? '' : `?title=${filterBy.title}&tags=${filterBy.tags}&minPrice=${filterBy.minPrice}&maxPrice=${filterBy.maxPrice}&sort=anaAref`
+    // console.log(queryStr);
+    // return httpService.get(`eventi${queryStr}`)
+    console.log(data);
     // return storageService.query('eventi')
+
 }
 // function queryByUser(filterBy) {
 //     var queryStr = (!filterBy) ? '' : `?host=${filterBy.host}&sort=anaAref`

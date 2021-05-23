@@ -10,13 +10,6 @@
 
     // grid-column: 1/-1;
 }
-.logo {
-    width: 20px;
-    // font-size: rem(28px);
-    // font-family: "GochiHand-Regular";
-    // margin-inline-start: 25px;
-    // margin-inline-end: 25px;
-}
 
 .header-list {
     .avatar {
@@ -39,9 +32,6 @@
     }
 }
 
-.logo {
-    font-family: Airbnb Cereal App Bold;
-}
 @media screen and (max-width: $mobile-breakpoint) {
     nav {
         transform: translate(120%, 60%);

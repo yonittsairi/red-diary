@@ -10,7 +10,7 @@ export default function EditPost() {
 
     }
     const deletePost = () => {
-        ref.current.innerText = "  מה בראשך?"
+        ref.current.innerText = "שתפי אותנו בסיפור שלך"
 
     }
 
@@ -21,12 +21,13 @@ export default function EditPost() {
                 <div className="pattern">
                     <p ref={ref} contentEditable className="content">
 
-                        מה בראשך?
+                        שתפי אותנו בסיפור שלך
                     </p>
 
                 </div>
-                <DeleteIcon onClick={deletePost} />
-                <PostAddIcon onClick={savePost} />
+                <div className="flex align-center">  <DeleteIcon onClick={deletePost} />
+                    {/* <PostAddIcon /> */}
+                    <button onClick={savePost}>שתפי</button></div>
             </div>
 
 
