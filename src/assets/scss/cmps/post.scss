@@ -1,0 +1,68 @@
+.paper {
+    width: 600px;
+    // height: 700px;
+    position: relative;
+    margin: 20px auto;
+    padding-top: 40px;
+    padding-bottom: 10px;
+    background-color: white;
+    box-shadow: 0px 0px 8px 0px #888;
+}
+
+/* styling red vertical line */
+// #paper::before {
+//     content: "";
+//     width: 2px;
+//     height: 100%;
+//     position: absolute;
+//     top: 0;
+//     left: 550px;
+//     background-color: rgba(255, 0, 0, 0.6);
+// }
+
+/* styling blue horizontal lines */
+.pattern {
+    height: 100%;
+    background-image: repeating-linear-gradient(white 0px, white 24px, teal 25px);
+}
+
+/* styling text content */
+.content {
+    padding-top: 6px;
+    padding-left: 20px;
+    padding-right: 16px;
+    line-height: 25px;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+    font-size: 16px;
+    letter-spacing: 1px;
+    word-spacing: 5px;
+    text-align: right;
+}
+
+.icon-bar {
+    margin-top: 20px;
+}
+.bar {
+    width: 100%;
+    margin-top: 10px;
+    font-size: 16px;
+    background-color: #ddd;
+}
+
+.rank {
+    text-align: right;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-right: 5px;
+    color: white;
+    text-align: right;
+}
+
+.emoj {
+    padding: 2px;
+    cursor: pointer;
+}
+
+.emoj:hover {
+    font-size: 20px;
+}
