@@ -5,7 +5,7 @@ import Avatar from '@material-ui/core/Avatar';
 import SendIcon from '@material-ui/icons/Send';
 import CloseIcon from '@material-ui/icons/Close';
 
-export function Chat() {
+export function Chat({ openChat }) {
     const [state, setState] = useState({
         msg: { txt: '' },
         msgs: [{ from: '', txt: 'שלום לך, תודה שפנית אלינו' }],
@@ -99,7 +99,7 @@ export function Chat() {
             <b className="chat-topic chat-layout flex space-between">  <div className="flex  space-between" ><div className="flex align-center" >
                 {/* <Avatar className={'avatar'} /> */}
                 <div>אנחנו כאן</div></div>
-            </div><b><CloseIcon></CloseIcon></b></b>
+            </div><b><CloseIcon onClick={openChat}></CloseIcon></b></b>
 
             <h3>{state.currTypingUser?.isTyping && state.currTypingUser.username + ' is typing...'}</h3>
 

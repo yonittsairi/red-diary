@@ -8,13 +8,13 @@ import { Link } from 'react-router-dom';
 import HelpIcon from '@material-ui/icons/Help';
 import SupervisedUserCircleIcon from '@material-ui/icons/SupervisedUserCircle';
 
-export default function Header() {
+export default function Header({ openChat }) {
     return (
         <div className="main-header flex space-between align-center">
             <div className="header-link flex  align-center">
                 <Link to="/">     <h3>היומן האדום</h3></Link></div>
             <ul className="header-list flex space-between">
-                <li className="header-link"><SupervisedUserCircleIcon /></li>
+                <li className="header-link"><SupervisedUserCircleIcon onClick={openChat} /></li>
                 <li className="header-link"> <Link to="/About"><HelpIcon /></Link></li>
                 <li className="header-link">    <Link to="/Messages">
 

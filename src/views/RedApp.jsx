@@ -10,7 +10,6 @@ export default function RedApp() {
 
 
             <PostsList />
-            <Chat />
         </div>
     )
 }
