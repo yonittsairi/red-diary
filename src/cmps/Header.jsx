@@ -12,7 +12,6 @@ export default function Header() {
     return (
         <div className="main-header flex space-between align-center">
             <div className="header-link flex  align-center">
-                {/* <img className='logo' src={logo} /> */}
                 <Link to="/">     <h3>היומן האדום</h3></Link></div>
             <ul className="header-list flex space-between">
                 <li className="header-link"><SupervisedUserCircleIcon /></li>
@@ -22,7 +21,7 @@ export default function Header() {
                     <ChatIcon /></Link></li>
                 <li className="header-link"> <Link to="/">
                     <HomeIcon size={'large'} /></Link></li>
-                <li className="header-link">    <Avatar /></li>
+                <li className="header-link"> <Link to="/Login-signup"> <Avatar /></Link>  </li>
 
             </ul>
         </div>

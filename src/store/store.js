@@ -2,14 +2,12 @@ import thunk from 'redux-thunk';
 import { createStore, applyMiddleware, compose, combineReducers } from 'redux'
 
 
-import { eventiReducer } from './reducer/eventiReducer.js';
+import { postReducer } from './reducer/postReducer.js';
 import { userReducer } from './reducer/userReducer.js';
-import { favReducer } from './reducer/favReducer.js';
 
 const rootReducer = combineReducers({
-    eventiModule: eventiReducer,
+    postModule: postReducer,
     userModule: userReducer,
-    favsModule: favReducer
 });
 
 

@@ -36,7 +36,6 @@ export default function Post() {
                         <div> <FontAwesomeIcon icon={faFlag} color="red" /><span>({state.red})</span>
                         </div>
                         <div><FontAwesomeIcon icon={faFlag} color="gray" /><span>({state.white})</span></div>
-                        <ChatIcon />
                     </div>
                     <div className="icon-bar flex align-center">
                         <span className="emoj">📢</span>
@@ -47,8 +46,8 @@ export default function Post() {
                         <span className="emoj">🔔</span>
                     </div>
                 </div>
-                <b onClick={openComments}>{state.comments} תגובות</b>
-                {state.openComments && <Comments />}
+                {/* <b onClick={openComments}>{state.comments} תגובות</b> */}
+                {/* {state.openComments && <Comments />} */}
             </div >
         </div >
 
