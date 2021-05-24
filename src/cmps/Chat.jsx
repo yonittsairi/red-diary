@@ -115,7 +115,7 @@ export function Chat({ openChat }) {
 
                     <input
                         type="text"
-                        value={state.msg.txt}
+
 
 
                         name="txt"

@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faFlag } from '@fortawesome/free-solid-svg-icons'
 import Avatar from '@material-ui/core/Avatar';
-import Comments from './Comments';
+import { Comments } from './Comments';
 import DeleteIcon from '@material-ui/icons/Delete';
 import PostAddIcon from '@material-ui/icons/PostAdd';
 import ChatIcon from '@material-ui/icons/Chat';
