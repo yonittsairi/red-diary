@@ -11,18 +11,21 @@ import SupervisedUserCircleIcon from '@material-ui/icons/SupervisedUserCircle';
 export default function Header({ openChat }) {
     return (
         <div className="main-header flex space-between">
-            <Link to="/">
-                <div className="logo">   <div className="book">
-                    <span className="page turn"></span>
-                    <span className="page turn"></span>
-                    <span className="page turn"></span>
-                    <span className="page turn"></span>
-                    <span className="page turn"></span>
-                    <span className="page turn"></span>
-                    <span className="cover"></span>
-                    <span className="page"></span>
-                    <span className="cover turn"></span></div>
-                </div></Link> <div className="flex align-center">
+            <Link to="/"><img className="logo" src={logo} />
+                {/* <div className="logo">
+                    <div className="book">
+                        <span className="page turn"></span>
+                        <span className="page turn"></span>
+                        <span className="page turn"></span>
+                        <span className="page turn"></span>
+                        <span className="page turn"></span>
+                        <span className="page turn"></span>
+                        <span className="cover"></span>
+                        <span className="page"></span>
+                        <span className="cover turn"></span>
+                    </div>
+                </div> */}
+            </Link> <div className="flex align-center">
 
             </div>
             <ul className="header-list flex space-between">

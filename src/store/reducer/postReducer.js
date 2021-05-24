@@ -20,8 +20,10 @@ export function postReducer(state = initialState, action) {
             })
             return { ...state, posts: editedposts }
         case 'ADD_POST':
-            console.log('aciton post', action.post)
-            state = { ...state, posts: [...state.posts, action.post] }
+            // console.log('aciton post', action.post)
+            const posts = state.posts
+            posts.unshift(action.post)
+            state = { ...state, posts: posts }
             return state
 
         case 'REMOVE_POST':

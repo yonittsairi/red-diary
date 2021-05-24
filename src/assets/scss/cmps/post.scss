@@ -1,12 +1,12 @@
 .paper {
-    width: 600px;
+    width: 900px;
     // height: 700px;
     position: relative;
     margin: 20px auto;
     padding-top: 40px;
     padding-bottom: 10px;
     background-color: white;
-    box-shadow: 0px 0px 8px 0px #888;
+    box-shadow: 6px 6px 25px #c78a0029;
 }
 
 /* styling red vertical line */
@@ -23,20 +23,24 @@
 /* styling blue horizontal lines */
 .pattern {
     height: 100%;
-    background-image: repeating-linear-gradient(white 0px, white 24px, teal 25px);
+    // background-image: repeating-linear-gradient(white 0px, white 24px, teal 25px);
 }
 
 /* styling text content */
 .content {
-    padding-top: 6px;
-    padding-left: 20px;
-    padding-right: 16px;
-    line-height: 25px;
-    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-    font-size: 16px;
-    letter-spacing: 1px;
-    word-spacing: 5px;
-    text-align: right;
+    // padding-top: 6px;
+    // padding-left: 20px;
+    // padding-right: 16px;
+    // line-height: 25px;
+    // font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+    // font-size: 16px;
+    // letter-spacing: 1px;
+    // word-spacing: 5px;
+    // text-align: right;
+    background-color: #f8f8f8;
+    margin: 0 20px;
+    border-radius: 10px;
+    padding: 5px;
 }
 
 .icon-bar {

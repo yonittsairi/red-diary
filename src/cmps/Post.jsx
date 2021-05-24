@@ -11,6 +11,7 @@ import PanToolIcon from '@material-ui/icons/PanTool';
 import SentimentVeryDissatisfiedIcon from '@material-ui/icons/SentimentVeryDissatisfied';
 import Tooltip from '@material-ui/core/Tooltip';
 import EditComment from './EditComment.jsx';
+import { UtilService } from './../service/UtilService';
 export default function Post({ post }) {
     const [state, setstate] = useState({ red: 20, white: 10, openComments: false, comments: 8 })
     const rate = (state.red * 100 / (state.red + state.white)).toFixed(0) + '%'
@@ -18,6 +19,9 @@ export default function Post({ post }) {
     const openComments = () => {
         setstate({ ...state, openComments: !state.openComments })
     }
+
+    const NUM = UtilService.getRandomInt(1, 20)
+
     return (
         <div>
 
@@ -46,7 +50,7 @@ export default function Post({ post }) {
                         <span className="emoj">🔔</span> */}
                     </div>
                 </div>
-                <b onClick={openComments}>{state.comments} תגובות</b>
+                <b onClick={openComments}>{NUM} תגובות</b>
                 {state.openComments && <Comments />}
                 <EditComment />
 
