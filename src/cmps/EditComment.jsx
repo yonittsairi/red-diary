@@ -6,11 +6,9 @@ import Avatar from '@material-ui/core/Avatar';
 export default function EditComment() {
 
     return (
-        <div>
-            <form className="comment-input" action="">
-                <input className="comment-input" name="comment" placeholder="הוספי תגובה" />
-                <button>פרסמי</button>
-            </form>
-        </div>
+        <div> <form className="comment-input" action="">
+            <input className="comment-input" name="comment" placeholder="הוספי תגובה" />
+
+        </form><button>פרסמי</button></div>
     )
 }

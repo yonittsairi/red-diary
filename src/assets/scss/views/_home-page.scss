@@ -10,7 +10,25 @@
         margin: 0 5px;
     }
 }
-
+.sponsors {
+    margin: 0 20px;
+}
 svg {
     color: #e6c986;
+}
+.MuiAvatar-root {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    overflow: hidden;
+    // position: relative;
+    font-size: 1.25rem;
+    align-items: center;
+    flex-shrink: 0;
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+    line-height: 1;
+    margin: 20px;
+    user-select: none;
+    border-radius: 50%;
+    justify-content: center;
 }

@@ -18,8 +18,11 @@ export function App() {
   const openChat = () => {
     setstate({ ...state, chatOpen: !state.chatOpen })
   }
+
+
   useEffect(() => {
     dispatch(loadPosts())
+    setTimeout(() => openChat(), 5000)
     return () => {
 
     }
@@ -32,8 +35,8 @@ export function App() {
           <Route component={LoginSignUp} path="/Login-signup" />
           <Route component={About} path="/About" />
           <Route component={Messages} path="/Messages" />
-          <Route component={RedApp} path="/Diary" />
-          <Route component={Diary} path="/" />
+          <Route component={RedApp} path="/" />
+          {/* <Route component={Diary} path="/" /> */}
         </Switch>
       </main>
       {state.chatOpen && <Chat openChat={openChat} />}

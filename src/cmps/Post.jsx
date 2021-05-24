@@ -26,15 +26,17 @@ export default function Post({ post }) {
         <div>
 
             <div className="paper">
-                <div className="flex align-center"><Avatar className="avatar" />אנונימית משתפת</div>
+                <div className="flex align-center">
+                    <button className="tag">אלימות קשה</button>
+                    <button className="tag">פגיעה מינית</button>
+                    <button className="tag">פגיעה בילדים</button>
+                </div>  <div className="flex align-center"><Avatar className="avatar" />אנונימית משתפת</div>
                 <div className="pattern">
                     <div contentEditable className="content">
                         {post.data}
                     </div >
                 </div >
-                {/* <div className="bar">
-                    <div className="rank" style={{ width: rate, backgroundColor: color }}>{rate}</div>
-                </div> */}
+
                 <div className="flex space-between align-center">
                     {/* <div className="icon-bar flex space-between align-center">
                         <div> <FontAwesomeIcon icon={faFlag} color="red" /><span>({state.red})</span>
@@ -42,9 +44,10 @@ export default function Post({ post }) {
                         <div><FontAwesomeIcon icon={faFlag} color="gray" /><span>({state.white})</span></div>
                     </div> */}
                     <div className="icon-bar flex align-center">
+                        <span className="emoj">😢</span>
+                    הוסיפי רגש לסיפור
                         {/* <span className="emoj">📢</span>
                         <span className="emoj">🚨</span>
-                        <span className="emoj">😢</span>
                         <span className="emoj">👑</span>
                         <span className="emoj">🙏🏻</span>
                         <span className="emoj">🔔</span> */}

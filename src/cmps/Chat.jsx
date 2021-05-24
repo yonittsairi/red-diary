@@ -6,9 +6,10 @@ import SendIcon from '@material-ui/icons/Send';
 import CloseIcon from '@material-ui/icons/Close';
 
 export function Chat({ openChat }) {
+    const text = 'היי יקירה, אנו שמחות שבחרת לשתף אותנו בחוויה האישית שלך, זהו מקום בטוח עבורך להיפתח, לשתף, להיחשף. אנא דעי שאנחנו כאן בשבילך – חברות הקהילה והיועצים המומחים העומדים לרשותך זמינים בכל עת'
     const [state, setState] = useState({
         msg: { txt: '' },
-        msgs: [{ from: '', txt: 'שלום לך, תודה שפנית אלינו' }],
+        msgs: [{ from: '', txt: text }],
         isBotMode: false,
         currTypingUser: {
             username: '',
